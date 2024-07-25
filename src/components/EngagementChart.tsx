@@ -44,7 +44,7 @@ const EngagementChart: React.FC<ChartProps> = ({ data, totals }) => {
       : [];
 
   return (
-    <div className="bg-black rounded-[12px] p-[24px_0]">
+    <div className="bg-[#171717] rounded-[12px] p-[24px_0]">
       <div className="w-full h-[270px] flex justify-center items-center ml-[-35px]">
         <ResponsiveContainer>
           <BarChart

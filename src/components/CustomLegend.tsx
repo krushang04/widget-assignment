@@ -27,15 +27,16 @@ export default function CustomLegend(props: CustomLegendProps) {
               {totals && entry?.value && (
                 <span>{`${totals[entry.value as keyof EngagementTotals]} ${mappingLegends?.[entry.value]}`}</span>
               )}
-              {entry.value === 'numShares' ? (
-                <div
-                  className={`w-[6px] h-[15px] bg-[${entry.color?.slice(0, -2)}] opacity-60 ml-1 mb-1 rounded-[4px]`}
-                ></div>
-              ) : (
-                <div
-                  className={`w-[6px] h-[14px] bg-[${entry.color}] ml-1 mb-1 rounded-[4px]`}
-                ></div>
-              )}
+              <div
+                className={`w-[6px] h-[15px]  ml-1 mb-1 rounded-[4px]`}
+                style={{
+                  backgroundColor:
+                    entry?.value === 'numShares'
+                      ? `${entry.color?.slice(0, -2)}`
+                      : `${entry.color}`,
+                  opacity: entry?.value === 'numShares' ? '60%' : '100%',
+                }}
+              ></div>
             </div>
           ))}
         </div>
