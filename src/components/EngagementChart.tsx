@@ -63,7 +63,11 @@ const EngagementChart: React.FC<ChartProps> = ({ data, totals }) => {
             <YAxis stroke="none" />
             <Tooltip
               content={<CustomTooltip />}
-              cursor={{ fill: 'transparent' }}
+              cursor={{
+                fill: 'transparent',
+                stroke: '#606060',
+                strokeWidth: 2,
+              }}
             />
             <Legend
               align="right"

@@ -17,7 +17,7 @@ const CustomTooltip: React.FC<CustomTooltipProps> = ({ payload }) => {
   const date = formatDate(data.date);
 
   return (
-    <div className="bg-white border border-gray-300 p-4 rounded-lg shadow-lg transition-transform transform hover:bg-red-200 hover:scale-105 text-[14px]">
+    <div className="bg-[#606060] border border-gray-300 p-4 rounded-lg shadow-lg transition-transform transform hover:bg-red-200 hover:scale-105 text-[14px]">
       <p className="m-0">
         <strong>DATE: </strong>
         {date}
